@@ -8,7 +8,7 @@ def pointPotential(x,y,q,posx,posy):
         return PointP
 
 
-def dipolePotential(x,y,q, d):
+def dipolePotential(x,y,q,d):
     """finds the potential between two charges"""
     k=8.98e9                       
     Vdipole = (k*q/np.sqrt(y**2+(x-(d/2))**2)) - (k*q/np.sqrt(y**2+(x+(d/2))**2)) 
