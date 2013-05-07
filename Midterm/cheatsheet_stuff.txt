@@ -16,3 +16,5 @@ print TrapInt(3,30)
 enter in x as an "arange(start,end,stride), like below
 plot(arange(0.,3.,0.1), TrapInt(arange(0.,3.,0.1),30))"""
 
+
+from scipy.interpolate import interp1d
