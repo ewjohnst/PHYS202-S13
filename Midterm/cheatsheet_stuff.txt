@@ -11,3 +11,8 @@ def TrapInt(x,N):
         s += f(a+i*w)
     return(w*s)
 print TrapInt(3,30)
+
+"""to do a plot of "integral of y vs x" for the function above, you MUST
+enter in x as an "arange(start,end,stride), like below
+plot(arange(0.,3.,0.1), TrapInt(arange(0.,3.,0.1),30))"""
+
