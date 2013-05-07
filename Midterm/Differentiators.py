@@ -1,11 +1,10 @@
 import numpy as np
-
+import numpy as numpy
 
 def finiteDifference(x,y):
     """This will differentiate a function by using the center average
     carefull to make sure arrays are same size for x and y."""    
 
-    dydx = zeros(y.shape,float)
     
     dydx = zeros(y.shape,float) # we know it will be this size
     dydx[1:-1] = (y[2:]-y[:-2])/(x[2:]-x[:-2]) #center difference, works for most
