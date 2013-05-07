@@ -1,0 +1,13 @@
+Trapezoidal Integration Technique
+
+def TrapInt(x,N):
+    """This function takes the integral of a function"""
+    #N = 30 #number of trapezoids we'll use, not needed
+    a = 0. #starting point
+    b = x #ending point
+    w = (b-a)/N #width of each trapezoid
+    s = 0.5*f(a) + 0.5*f(b) #first part of formula
+    for i in range(1,N): #taking integral
+        s += f(a+i*w)
+    return(w*s)
+print TrapInt(3,30)
