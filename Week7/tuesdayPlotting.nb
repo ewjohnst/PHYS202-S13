@@ -1,0 +1,113 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3171,        103]
+NotebookOptionsPosition[      2918,         89]
+NotebookOutlinePosition[      3272,        105]
+CellTagsIndexPosition[      3229,        102]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"g", " ", "=", " ", "9.8"}], ";"}], " ", 
+    RowBox[{"(*", "gravity", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"l", " ", "=", " ", "0.5"}], ";", " ", 
+     RowBox[{"(*", 
+      RowBox[{"length", " ", "of", " ", "pendulum"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"omega", " ", "=", " ", 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"[", 
+        RowBox[{"g", "/", "l"}]}]}]}]}]}], ")"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Theta]0", " ", "=", " ", 
+    RowBox[{"20", "*", 
+     RowBox[{"\[Pi]", "/", "180"}]}]}], ";", " ", 
+   RowBox[{"(*", 
+    RowBox[{"20", " ", "degrees"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"\[Omega]0", " ", "=", " ", "0"}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"starting", " ", "from", " ", "rest"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ode1", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Theta]", "''"}], "[", "t", "]"}], " ", "\[Equal]", " ", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"g", "/", "l"}], ")"}]}], " ", "*", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"\[Theta]", "[", "0", "]"}], " ", "\[Equal]", " ", 
+      "\[Theta]0"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Theta]", "'"}], "[", "0", "]"}], " ", "\[Equal]", " ", 
+      "\[Omega]0"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol", " ", "\[Equal]", " ", 
+    RowBox[{"NDSolve", "[", 
+     RowBox[{"ode1", ",", " ", "\[Theta]", ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", " ", "0", ",", " ", "20"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"approx", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"180", "/", " ", "Pi"}], ")"}], " ", "\[Theta]0", " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Omega]", " ", "t"}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.577552775792143*^9, 3.577552776335019*^9}, {
+  3.577552810709447*^9, 3.577553232297879*^9}, {3.57755331577382*^9, 
+  3.577553351478182*^9}}]
+},
+WindowSize->{740, 525},
+WindowMargins->{{Automatic, 230}, {Automatic, 31}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 22, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2357, 67, 198, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
