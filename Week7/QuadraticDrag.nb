@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     90107,       1597]
-NotebookOptionsPosition[     89852,       1583]
-NotebookOutlinePosition[     90204,       1599]
-CellTagsIndexPosition[     90161,       1596]
+NotebookDataLength[    105940,       2070]
+NotebookOptionsPosition[    105143,       2040]
+NotebookOutlinePosition[    105496,       2056]
+CellTagsIndexPosition[    105453,       2053]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1405,6 +1405,7 @@ ThwKtGqWrJml7FtGf8WUwqH8F23q33fB57LDNWfLMPgfJy3DZA==
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->True,
   AxesOrigin->{0, 0},
+  ImageSize->{425., Automatic},
   PlotRange->{All, All},
   PlotRangeClipping->True,
   PlotRangePadding->{Automatic, Automatic}], "\n", 
@@ -1579,10 +1580,466 @@ $CellContext`result$]}, {$CellContext`t, 0, 20},
   "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.577552775792143*^9, 3.577552776335019*^9}, {
   3.577552810709447*^9, 3.577553232297879*^9}, {3.57755331577382*^9, 
-  3.577553351478182*^9}, {3.577721204954979*^9, 3.5777212119584723`*^9}}]
+  3.577553351478182*^9}, {3.577721204954979*^9, 3.5777212119584723`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", " ", "=", " ", "9.8"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"m", "/", 
+    RowBox[{"s", "^", "2"}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"ode1", " ", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "''"}], "[", "t", "]"}], "==", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "g"}], " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "'"}], "[", "t", "]"}], "/", "30"}], " ", 
+        RowBox[{"t", "^", "2"}]}], ")"}], " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], " ", "+", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], ",", 
+    " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"y", "''"}], "[", "t", "]"}], "==", 
+     RowBox[{
+      RowBox[{"-", "g"}], 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"y", "'"}], "[", "t", "]"}], "/", "30"}], " ", 
+           RowBox[{"t", "^", "2"}]}], ")"}], " ", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], 
+       ")"}]}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"x", "[", "0", "]"}], "==", "0"}], ",", 
+    RowBox[{
+     RowBox[{"y", "[", "0", "]"}], "==", "2"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "'"}], "[", "0", "]"}], "==", " ", 
+     RowBox[{"30", "*", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"50", " ", 
+        RowBox[{"pi", " ", "/", "180"}]}], "]"}]}]}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"y", "'"}], "[", "0", "]"}], "==", 
+     RowBox[{"30", "*", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"50", " ", 
+        RowBox[{"pi", "/", "180"}]}], "]"}]}]}]}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.577724403889977*^9, 3.577724519367619*^9}, {
+  3.577725050504159*^9, 3.577725162799177*^9}, {3.57772527925473*^9, 
+  3.577725308955612*^9}, {3.5777253399859943`*^9, 3.577725391807728*^9}, {
+  3.577725421990273*^9, 3.5777254391908627`*^9}, {3.577725489476259*^9, 
+  3.5777255283649597`*^9}, {3.577725814178988*^9, 3.5777258289407063`*^9}, {
+  3.577725923513762*^9, 3.577725928959364*^9}, {3.577726001130722*^9, 
+  3.5777260168594713`*^9}, {3.577726052704432*^9, 3.577726079777636*^9}, {
+  3.577726197635805*^9, 3.577726278352036*^9}, {3.577726621016574*^9, 
+  3.577726625904154*^9}, {3.577726755540257*^9, 3.577726762579846*^9}, {
+  3.5777268080981216`*^9, 3.5777268130715017`*^9}}],
+
+Cell[BoxData["9.8`"], "Output",
+ CellChangeTimes->{
+  3.577725988236951*^9, 3.577726087492524*^9, {3.577726250762376*^9, 
+   3.577726279687097*^9}, 3.577726629285059*^9, 3.577726682522643*^9, {
+   3.57772676528899*^9, 3.577726781626781*^9}, 3.5777268158498173`*^9, 
+   3.577726864835711*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "\[Prime]\[Prime]",
+      MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{"-", "0.32666666666666666`"}], " ", 
+     SuperscriptBox["t", "2"], " ", 
+     RowBox[{
+      SuperscriptBox["x", "\[Prime]",
+       MultilineFunction->None], "[", "t", "]"}], " ", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["x", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["y", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], "2"]}]]}]}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["y", "\[Prime]\[Prime]",
+      MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{"-", "9.8`"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        FractionBox["1", "30"], " ", 
+        SuperscriptBox["t", "2"], " ", 
+        RowBox[{
+         SuperscriptBox["y", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{
+            SuperscriptBox["x", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{
+            SuperscriptBox["y", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], "2"]}]]}]}], 
+      ")"}]}]}], ",", 
+   RowBox[{
+    RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    RowBox[{"y", "[", "0", "]"}], "\[Equal]", "2"}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "\[Prime]",
+      MultilineFunction->None], "[", "0", "]"}], "\[Equal]", 
+    RowBox[{"30", " ", 
+     RowBox[{"Cos", "[", 
+      FractionBox[
+       RowBox[{"5", " ", "pi"}], "18"], "]"}]}]}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["y", "\[Prime]",
+      MultilineFunction->None], "[", "0", "]"}], "\[Equal]", 
+    RowBox[{"30", " ", 
+     RowBox[{"Sin", "[", 
+      FractionBox[
+       RowBox[{"5", " ", "pi"}], "18"], "]"}]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.577725988236951*^9, 3.577726087492524*^9, {3.577726250762376*^9, 
+   3.577726279687097*^9}, 3.577726629285059*^9, 3.577726682522643*^9, {
+   3.57772676528899*^9, 3.577726781626781*^9}, 3.5777268158498173`*^9, 
+   3.57772686483902*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ode2", " ", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "\[Prime]\[Prime]",
+       MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+     RowBox[{
+      RowBox[{"-", "0.32666666666666666`"}], " ", 
+      SuperscriptBox["t", "2"], " ", 
+      RowBox[{
+       SuperscriptBox["x", "\[Prime]",
+        MultilineFunction->None], "[", "t", "]"}], " ", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{
+          SuperscriptBox["x", "\[Prime]",
+           MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+        SuperscriptBox[
+         RowBox[{
+          SuperscriptBox["y", "\[Prime]",
+           MultilineFunction->None], "[", "t", "]"}], "2"]}]]}]}], ",", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["y", "\[Prime]\[Prime]",
+       MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+     RowBox[{
+      RowBox[{"-", "9.8`"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         FractionBox["1", "30"], " ", 
+         SuperscriptBox["t", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["y", "\[Prime]",
+           MultilineFunction->None], "[", "t", "]"}], " ", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["x", "\[Prime]",
+              MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["y", "\[Prime]",
+              MultilineFunction->None], "[", "t", "]"}], "2"]}]]}]}], 
+       ")"}]}]}], ",", 
+    RowBox[{
+     RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+    RowBox[{
+     RowBox[{"y", "[", "0", "]"}], "\[Equal]", "2"}], ",", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "\[Prime]",
+       MultilineFunction->None], "[", "0", "]"}], "\[Equal]", "30"}], " ", 
+    ",", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["y", "\[Prime]",
+       MultilineFunction->None], "[", "0", "]"}], "\[Equal]", "30"}]}], " ", 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.5777268402868013`*^9, 3.5777268443021107`*^9}, {
+  3.577726887436625*^9, 3.577726889435034*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "\[Prime]\[Prime]",
+      MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{"-", "0.32666666666666666`"}], " ", 
+     SuperscriptBox["t", "2"], " ", 
+     RowBox[{
+      SuperscriptBox["x", "\[Prime]",
+       MultilineFunction->None], "[", "t", "]"}], " ", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["x", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["y", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], "2"]}]]}]}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["y", "\[Prime]\[Prime]",
+      MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{"-", "9.8`"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        FractionBox["1", "30"], " ", 
+        SuperscriptBox["t", "2"], " ", 
+        RowBox[{
+         SuperscriptBox["y", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], " ", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{
+            SuperscriptBox["x", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{
+            SuperscriptBox["y", "\[Prime]",
+             MultilineFunction->None], "[", "t", "]"}], "2"]}]]}]}], 
+      ")"}]}]}], ",", 
+   RowBox[{
+    RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    RowBox[{"y", "[", "0", "]"}], "\[Equal]", "2"}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "\[Prime]",
+      MultilineFunction->None], "[", "0", "]"}], "\[Equal]", "30"}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["y", "\[Prime]",
+      MultilineFunction->None], "[", "0", "]"}], "\[Equal]", "30"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.577726844658991*^9, {3.577726877183058*^9, 3.5777268991052847`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sol", "=", 
+  RowBox[{"NDSolve", "[", 
+   RowBox[{"ode2", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "100"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.577725603165264*^9, 3.577725609395397*^9}, {
+  3.577725761211732*^9, 3.577725790562777*^9}, {3.577725933268854*^9, 
+  3.5777259765942793`*^9}, {3.577726894679179*^9, 3.577726894766801*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "\[Rule]", 
+     TagBox[
+      RowBox[{"InterpolatingFunction", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "100.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
+       "]"}],
+      False,
+      Editable->False]}], ",", 
+    RowBox[{"y", "\[Rule]", 
+     TagBox[
+      RowBox[{"InterpolatingFunction", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "100.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
+       "]"}],
+      False,
+      Editable->False]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.577726823079707*^9, 3.5777268476277018`*^9}, {
+  3.5777268805315104`*^9, 3.577726901742654*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndinnt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Initial condition \[NoBreak]\\!\\(30.`\\\\ \
+\\(\\(Cos[\\(\\(0.2777777777777778`\\\\ pi\\)\\)]\\)\\)\\)\[NoBreak] is not a \
+number or a rectangular array of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/ndinnt\\\", ButtonNote -> \
+\\\"NDSolve::ndinnt\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.5777258724010468`*^9, {3.577725962894224*^9, 3.577725977861331*^9}, 
+   3.577726100903798*^9, 3.577726283794866*^9, 3.577726786694456*^9, {
+   3.577726820927641*^9, 3.577726823075671*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndinnt"}], "MessageName"], 
+  RowBox[{":", " "}], 
+  "\"\<Initial condition \[NoBreak]\!\(30.`\\\\\\\ \
+Cos[0.2777777777777778`\\\\\\\ pi]\)\[NoBreak] is not a number or a \
+rectangular array of numbers. \!\(\*ButtonBox["\[RightSkeleton]",
+Appearance->{Automatic, None},
+BaseStyle->\\\"Link\\\",
+ButtonData:>\\\"paclet:ref/message/NDSolve/ndinnt\\\",
+ButtonNote->\\\"NDSolve::ndinnt\\\"]\)\>\""}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.5777258724010468`*^9, {3.577725962894224*^9, 3.577725977861331*^9}, 
+   3.577726100903798*^9, 3.577726283794866*^9, 3.577726786694456*^9, 
+   3.577726820927641*^9}],
+
+Cell[BoxData[
+ RowBox[{"NDSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["x", "\[Prime]\[Prime]",
+        MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+      RowBox[{
+       RowBox[{"-", "0.32666666666666666`"}], " ", 
+       SuperscriptBox["t", "2"], " ", 
+       RowBox[{
+        SuperscriptBox["x", "\[Prime]",
+         MultilineFunction->None], "[", "t", "]"}], " ", 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{
+           SuperscriptBox["x", "\[Prime]",
+            MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+         SuperscriptBox[
+          RowBox[{
+           SuperscriptBox["y", "\[Prime]",
+            MultilineFunction->None], "[", "t", "]"}], "2"]}]]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["y", "\[Prime]\[Prime]",
+        MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+      RowBox[{
+       RowBox[{"-", "9.8`"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{
+          FractionBox["1", "30"], " ", 
+          SuperscriptBox["t", "2"], " ", 
+          RowBox[{
+           SuperscriptBox["y", "\[Prime]",
+            MultilineFunction->None], "[", "t", "]"}], " ", 
+          SqrtBox[
+           RowBox[{
+            SuperscriptBox[
+             RowBox[{
+              SuperscriptBox["x", "\[Prime]",
+               MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+            SuperscriptBox[
+             RowBox[{
+              SuperscriptBox["y", "\[Prime]",
+               MultilineFunction->None], "[", "t", "]"}], "2"]}]]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"y", "[", "0", "]"}], "\[Equal]", "2"}], ",", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["x", "\[Prime]",
+        MultilineFunction->None], "[", "0", "]"}], "\[Equal]", 
+      RowBox[{"30", " ", 
+       RowBox[{"Cos", "[", 
+        FractionBox[
+         RowBox[{"5", " ", "pi"}], "18"], "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["y", "\[Prime]",
+        MultilineFunction->None], "[", "0", "]"}], "\[Equal]", 
+      RowBox[{"30", " ", 
+       RowBox[{"Sin", "[", 
+        FractionBox[
+         RowBox[{"5", " ", "pi"}], "18"], "]"}]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "100"}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.5777258724024143`*^9, {3.5777259628970337`*^9, 3.577725977866767*^9}, 
+   3.57772610097716*^9, 3.577726283803278*^9, 3.5777267866990557`*^9}]
+}, Open  ]]
 },
-WindowSize->{596, 675},
-WindowMargins->{{Automatic, -6}, {Automatic, 0}},
+WindowSize->{542, 676},
+WindowMargins->{{Automatic, 135}, {Automatic, 0}},
 FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 22, \
 2012)",
 StyleDefinitions->"Default.nb"
@@ -1598,7 +2055,23 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 89291, 1561, 1100, "Input"]
+Cell[557, 20, 89323, 1562, 1348, "Input"],
+Cell[CellGroupData[{
+Cell[89905, 1586, 2829, 80, 103, "Input"],
+Cell[92737, 1668, 291, 5, 27, "Output"],
+Cell[93031, 1675, 2432, 72, 115, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95500, 1752, 2173, 64, 121, InheritFromParent],
+Cell[97676, 1818, 2043, 62, 105, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[99756, 1885, 453, 10, 27, "Input"],
+Cell[100212, 1897, 764, 25, 43, "Output"],
+Cell[100979, 1924, 773, 16, 40, "Message"],
+Cell[101755, 1942, 720, 17, 40, "Message"],
+Cell[102478, 1961, 2649, 76, 152, "Output"]
+}, Open  ]]
 }
 ]
 *)
