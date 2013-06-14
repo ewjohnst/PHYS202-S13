@@ -11,8 +11,8 @@ def LinearLeastSquaresFit(x,y):
     bottom = ((len(x)-2)*(XsquarAvg - Xavg**2))
     slope = (XYavg - (Xavg*Yavg))/(XsquarAvg - (Xavg**2))
     intercept = ((XsquarAvg*Yavg)-(Xavg*XYavg))/(XsquarAvg - Xavg**2)
-    slerr = sqrt(((sum((y-(slope*x + intercept))**2))/len(x))/bottom)
-    interror = sqrt(((sum(  (y - (slope*x + intercept))**2))/len(x))*(XsquarAvg)/((len(x)-2)*(XsquarAvg - Xavg**2)))
+    slerr = (((sum((y-(slope*x + intercept))**2))/len(x))/bottom)**.5 #sqrt here
+    interror = (((sum(  (y - (slope*x + intercept))**2))/len(x))*(XsquarAvg)/((len(x)-2)*(XsquarAvg - Xavg**2)))**.5 #sqrt here
     
     return slope, intercept, slerr, interror
 
@@ -34,7 +34,7 @@ def WeightedLinearLeastSquaresFit(x,y,weight):
     
         slope = ((w*wxy)-(wx*wy))/((w*wxsquared) - (wx**2))
         intercept = ((wxsquared*wy)-(wx*wxy))/(w*wxsquared - (wx**2))
-        slerr = sqrt((w)/((w*wxsquared) - (wx**2)))
-        interror = sqrt((wxsquared)/(w*wxsquared - (wx**2)))
+        slerr = ((w)/((w*wxsquared) - (wx**2)))**.5 #sqrt here
+        interror = ((wxsquared)/(w*wxsquared - (wx**2)))**.5 #sqrt here
         
     return slope, slerr, intercept, interror
